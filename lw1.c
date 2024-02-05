@@ -1,5 +1,3 @@
-// https://github.com/nothings/stb/blob/master/stb_ds.h
-
 #include <assert.h>
 #include <stdio.h>
 #include <stdlib.h>
