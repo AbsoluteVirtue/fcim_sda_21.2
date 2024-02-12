@@ -1,4 +1,5 @@
 #include <assert.h>
+#include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -8,13 +9,33 @@ int val_in_range(int lower, int upper)
 }
 
 int *cons(size_t n);
-size_t size(int *);
-void insert(int *a, size_t i, int v);
-void erase(int *a, size_t i);
-void clear(int *);
+size_t size(void *);
+void insert(void *a, size_t i, int v);
+void erase(void *a, size_t i);
+void clear(void *);
+bool empty(void *);
+bool eq(void *a, void *b);
 
-int main( void )
-{
+// vector
+void push_back(void *, int);
+size_t get(int);
+void erase_if(void *a, int v, bool (*p)(int));
+// stack
+void pop(void *);
+void push(void *, int);
+int top(void *);
+// double-ended queue
+void push_front(void *, int);
+void pop_front(void *, int);
+void erase_if(void *a, int v, bool (*p)(int));
+// queue
+int front(void *);
+int back(void *);
+void pop(void *);
+void push(void *, int);
+
+int main( void ) {
+
     size_t n = val_in_range(1, 100);
     int *a = cons(n);
 

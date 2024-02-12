@@ -1,41 +1,37 @@
-// https://godbolt.org/z/GTzeorP7W
+// https://godbolt.org/z/1qxqMsPrr
 
-// double-ended queue
+// queue
 //      cons n          - инициализировать массив заданной длины
-//      insert i v      - вставить элемент в произвольное место в массиве по индексу
-//      push_front v    - добавить элемент в начало массива
-//      pop_front       - удалить первый элемент массива
-//      get v           - найти элемент с заданным значением в массиве
+//      front           - найти первый элемент в массиве
+//      back            - найти последний элемент в массиве
+//      push v          - добавить элемент в конец массива
+//      pop             - удалить первый элемент массива
 //      empty           - проверить отсутствие элементов в массиве
+//      size            - определить длину массива
 //      clear           - удалить все элементы из массива
-//      erase_if p      - удалить значения из массива если условие предиката выполняется 
 
 #include <cassert>
 #include <cstdio>
-#include <deque>
+#include <queue>
 
-using dynarray = std::deque<int>;
+using dynarray = std::queue<int>;
 
 int main() {
     dynarray a = {};
 
-    a.push_back(20);
-    a.push_front(10);
-
-    for (size_t i = 0; i < a.size(); i++) printf("%d ", a[i]);
+    a.push(10);
+    a.push(20);
+    a.push(30);
 
     dynarray b = a;
 
-    a.pop_front();
-    a.pop_back();
+    assert(a == b);
+
+    for ( ; !a.empty(); a.pop()) printf("%d ", a.front());
 
     assert(a.empty());
 
-    for (size_t i = 0; i < a.size(); i++) printf("%d ", a[i]);
+    assert(3 == b.size());
 
-    printf("%d ", *std::find(b.begin(), b.end(), 10));
-
-    b.clear();
-
-    for (size_t i = 0; i < b.size(); i++) printf("%d ", b[i]);
+    for ( ; !b.empty(); b.pop()) printf("%d ", b.back());
 }
