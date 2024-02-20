@@ -26,7 +26,7 @@ int main(void) {
         printf("%d ", at(a, i));
     }
 
-    array b = cons(5);
+    array b = cons(size(a));
 
     for (size_t i = 0; i < size(b); i++) {
         at(b, i) = at(a, i);
