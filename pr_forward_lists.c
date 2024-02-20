@@ -16,23 +16,47 @@ typedef struct list {
 list cons(size_t);
 size_t size(list);
 bool empty(list);
-void clear(list);
+void clear(list*);
+void for_each(list*, void(*)(int*));
+
+void print(int *ref) {
+    printf("%d ", *ref);
+}
+
+void assign(int *ref) {
+    *ref = 0;
+}
 
 int main() {
     list a = cons(5);
 
+    for_each(&a, assign);
+    for_each(&a, print);
+
     list b = cons(size(a));
 
-    clear(a); clear(b);
+    for_each(&b, assign);
+    for_each(&b, print);
+
+    clear(&a); clear(&b);
 
     assert(empty(a));
+    assert(empty(b));
+}
 
+void for_each(list *a, void(*f)(int *)) {
+    struct node *tmp = a->head;
+    while(tmp) {
+        f(&(tmp->value));
+        tmp = tmp->next;
+    }
 }
 
 list cons(size_t n) {
     list r = { NULL, n };
     struct node *p = malloc(sizeof(struct node));
-    while(n > 0) {
+    p->next = NULL;
+    while(n > 1) {
         struct node *tmp = malloc(sizeof(struct node));
         tmp->next = p;
         p = tmp;
@@ -50,6 +74,11 @@ bool empty(list a) {
     return !size(a);
 }
 
-void clear(list a) {
-
+void clear(list *a) {
+    while (a->head) {
+        struct node *tmp = a->head;
+        a->head = a->head->next;
+        free(tmp);
+    }
+    a->size = 0;
 }
