@@ -17,14 +17,14 @@ list cons(size_t);
 size_t size(list);
 bool empty(list);
 void clear(list*);
-void for_each(list*, void(*)(int*));
+void for_each(list*, void(*)(int*, int));
 
-void print(int *ref) {
+void print(int *ref, int x) {
     printf("%d ", *ref);
 }
 
-void assign(int *ref) {
-    *ref = 0;
+void assign(int *ref, int x) {
+    *ref = x;
 }
 
 int main() {
@@ -44,10 +44,10 @@ int main() {
     assert(empty(b));
 }
 
-void for_each(list *a, void(*f)(int *)) {
+void for_each(list *a, void(*f)(int *, int)) {
     struct node *tmp = a->head;
     while(tmp) {
-        f(&(tmp->value));
+        f(&(tmp->value), 0);
         tmp = tmp->next;
     }
 }
@@ -75,7 +75,7 @@ bool empty(list a) {
 }
 
 void clear(list *a) {
-    while (a->head) {
+    while(a->head) {
         struct node *tmp = a->head;
         a->head = a->head->next;
         free(tmp);
