@@ -7,14 +7,14 @@ int val_in_range(int lower, int upper) {
     return lower + (rand() % (upper - lower));
 }
 
-void   clear(void *);
-bool   empty(void *);
-bool   contains(void *, int);
-void * find(void *, int);
-size_t size(void *);
-size_t count(void *, int);
-void   insert(void *, int);
-void   erase(void *, int);
+void   clear(void*);
+bool   empty(void*);
+bool   contains(void*, int);
+void*  find(void*, int);
+size_t size(void*);
+size_t count(void*, int);
+void   insert(void*, int);
+void   erase(void*, int);
 
 int main( void ) {
     void *a;

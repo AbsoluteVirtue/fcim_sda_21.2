@@ -7,15 +7,15 @@ int val_in_range(int lower, int upper) {
     return lower + (rand() % (upper - lower));
 }
 
-int *  cons(size_t n);
-void   clear(void *);
-bool   empty(void *);
-bool   eq(void *a, void *b);
-size_t size(void *);
-int    front(void *);
-int    back(void *);
-void   pop(void *);
-void   push(void *, int);
+void*  cons(size_t);
+void   clear(void*);
+bool   empty(void*);
+bool   eq(void*, void*);
+size_t size(void*);
+int    front(void*);
+int    back(void*);
+void   pop(void*);
+void   push(void*, int);
 
 int main( void ) {
 
