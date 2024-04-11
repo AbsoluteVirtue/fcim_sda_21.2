@@ -1,4 +1,5 @@
 // godbolt.org/z/Gd4j6nnv3
+#include <stdbool.h>
 
 // compiles on GCC trunk with -std=c2x
 
