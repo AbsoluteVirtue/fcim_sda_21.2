@@ -26,7 +26,7 @@
 2. A. Stepanov, P. McJones, **Elements of Programming** (А. Степанов, "Элементы программирования", рус.) -- http://elementsofprogramming.com/eop.pdf
 3. Книга об основах языка С++ для начинающих -- Андрей В. Столяров, [Введение в язык С++ (рус.)](http://www.stolyarov.info/books/pdf/cppintro5.pdf)
 
-## Онлайн-курсы
+## Онлайн-курсы для тех, кому не нравится язык С
 1. Введение в анализ данных в Python -- Тимофей Ф. Хирьянов (МФТИ),
 [Основы программирования и анализа данных на Python (рус.)](https://teach-in.ru/course/python-programming-and-data-analysis-basics)
 2. Серия видео о том, как компьютеры программируются с нуля -- 
