@@ -1,5 +1,5 @@
 /*  PR 02
-    1. error handling
+    1. error handling (push_back.realloc, at.operator[])
     2. AOS vs SOA
 */
 
