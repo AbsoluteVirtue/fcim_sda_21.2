@@ -1,26 +1,8 @@
-/*  PR 02
-    1. error handling (push_back.realloc, at.operator[])
-    2. AOS vs SOA
-    3. stack & queue
-*/
-
+#include <assert.h>
 #include <stddef.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <assert.h>
-
-typedef struct {
-    int i;
-    char c;
-    double d;
-} aos;
-
-typedef struct {
-    int i[100];
-    char c[100];
-    double d[100];
-} soa;
 
 typedef struct node {
     int data;
@@ -28,13 +10,6 @@ typedef struct node {
 } node; 
 
 int main(void) {
-
-    aos array[100];
-    soa structure;
-
-    printf("%zu %zu", sizeof(array), sizeof(structure));
-
-//////////////////////
 
     node first = {1, NULL};
     node second = {2, NULL};
@@ -48,5 +23,21 @@ int main(void) {
         printf("%d ", head->data);
         head = head->next;
     }
+
+    int array[] = {1, 2, 3, 4, 5};
+    node *current = NULL;
+    for (size_t i = 0; i < 5; i++)
+    {
+        node *tmp = malloc(sizeof(node));
+        tmp->data = array[i];
+        tmp->next = NULL;
+        if (current) current->next = tmp;
+        else head = tmp;
+        current = tmp;
+    }
     
+    while(head) {
+        printf("%d ", head->data);
+        head = head->next;
+    }
 }
