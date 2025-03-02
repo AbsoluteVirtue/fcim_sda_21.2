@@ -1,4 +1,5 @@
 // https://github.com/ThePrimeagen/zig-deez-structures/blob/master/src/main.zig
+// https://godbolt.org/z/9n9nnq1xv
 
 #include <assert.h>
 #include <stdbool.h>
