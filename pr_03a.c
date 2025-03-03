@@ -1,3 +1,4 @@
+// https://godbolt.org/z/9n9nnq1xv
 #include <stdio.h>
 #include <stddef.h>
 #include <stdbool.h>
