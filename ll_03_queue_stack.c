@@ -25,4 +25,14 @@ typedef struct queue { /* массив или связный список */ } q
 
 int main(void) {
 
+    stack s = {0};
+    for (size_t i = 0; i < 5; i++) push(&s, i);
+    for (; !empty(&s); pop(&s)) printf("%d ", top(s));
+    // 4 3 2 1 0
+    
+    queue q = {0};
+    for (size_t i = 0; i < 5; i++) push(&q, i);
+    for (; !empty(&q); pop(&q)) printf("%d ", front(q));
+    // 0 1 2 3 4
+
 }
