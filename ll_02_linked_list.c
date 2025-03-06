@@ -1,13 +1,36 @@
+/*
+1. resize -- изменяет размер списка на заданный
+2. initialize -- инициализирует список
+3. front -- возвращает элемент в начале списка
+4. back -- возвращает элемент в конце списка
+5. push_front -- добавляет новый элемент в начало списка
+6. pop_front -- удаляет первый элемент списка
+7. push_back -- добавляет новый элемент в конец списка
+8. pop_back -- удаляет последний элемент списка
+9. clear -- опустошает список (приводит в соответствие с initialize)
+10. size -- возвращает количество элементов в массиве
+11. insert -- добавляет элемент в список по ссылке
+12. erase -- удаляет элемент из списка по ссылке
+*/
+
 #include <assert.h>
 #include <stddef.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
+// var a,  https://en.cppreference.com/w/cpp/container/forward_list
 typedef struct node {
     int data;
     struct node *next;
-} node; 
+} node;
+
+// var b,  https://en.cppreference.com/w/cpp/container/list
+typedef struct node {
+    int data;
+    struct node *prev;
+    struct node *next;
+} node;
 
 int main(void) {
 
