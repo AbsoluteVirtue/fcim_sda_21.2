@@ -1,3 +1,5 @@
+// see: Quicksort, Cormen et al. p. 183
+// see: Merge-sort, Cormen et al. p. 36
 #include <stddef.h>
 
 #define swap(T, x, y) { T tmp = x; x = y; y = tmp; }
