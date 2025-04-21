@@ -6,7 +6,9 @@ typedef struct node {
     int x;
     struct node *left;
     struct node *right;
-} node; 
+} node;
+
+typedef node *tree;
 
 #define count 10
 
@@ -18,6 +20,29 @@ void print(node *n) {
     printf("%d ", n->x);
     print(n->right);
     // post
+}
+
+void print_levels(queue q) {
+    if (!q.size) return;
+    tree nodes [100];
+    size_t i = 0;
+    for (; q.size; pop(&q)) {
+        tree tmp = q.front->data;
+        printf("%d ", tmp->x);
+        nodes[i++] = tmp->left;
+        nodes[i++] = tmp->right;
+    }
+    for (size_t j = 0; j < i; j++) if (nodes[j]) push(&q, nodes[j]);
+    print(q);
+}
+
+void print_pad(tree parent, int padding) {
+    if (!parent) return;
+    char p[100] = {0};
+    for (int i = 0; i < padding; ++i) strcat(p, "\t");
+    print_pad(parent->right, padding + 1);
+    printf("%s%d\n", p, parent->x);
+    print_pad(parent->left, padding + 1);
 }
 
 void insert(node **n, int v) {
