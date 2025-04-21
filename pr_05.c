@@ -33,7 +33,7 @@ void print_levels(queue q) {
         nodes[i++] = tmp->right;
     }
     for (size_t j = 0; j < i; j++) if (nodes[j]) push(&q, nodes[j]);
-    print(q);
+    print_levels(q);
 }
 
 void print_pad(tree parent, int padding) {
