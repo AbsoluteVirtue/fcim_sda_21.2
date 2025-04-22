@@ -1,3 +1,5 @@
+// https://www.youtube.com/watch?v=8SUkrR7ZfTA
+
 #define isdigit(c) ((c) >= '0' && (c) <= '9')
 
 #ifdef TEST
