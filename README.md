@@ -1,33 +1,23 @@
-# FCIM.SDA21.6
+# sda-2022
+Примеры с занятий-семинаров и лабораторных работ для первого курса
 
-## Темы практических занятий
-1. Структура массивов и массив структур.
-2. Списки. Односвязный список. Двухсвязный список. Сортировка слиянием.
-3. Стек, очередь, дек.
-4. Граф.
-5. Двоичное дерево. Дерево поиска. Синтаксическое дерево.
-6. Пирамида. Пирамидальная сортировка.
-7. Алгоритмы поиска на строках.
+## С чего начать
+1. Скачайте последнюю версию git по ссылке: https://git-scm.com/downloads
+2. Зарегистрируйтесь на github: https://github.com/
+3. Создайте папку на компьютере для всех лабораторных, в которой необходимо инициализировать git одним из доступных способов (Git GUI, Git Bash, VSCode).
 
-## Онлайн-курсы
-1. E. Demaine, J. Ku, J. Solomon, **Introduction to Algorithms**, https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/pages/lecture-notes/
-2. J. Hug, J. Yokota, **Data Structures**, https://sp23.datastructur.es/
-
-## Минимально необходимые знания
-1. N. Wirth, **Algorithms + Data Structures = Programming** (Н. Вирт, "Алгоритмы и структуры данных", рус.) -- https://people.inf.ethz.ch/wirth/AD.pdf
-2. B. Kernighan, D. Ritchie, **The C Programming Language** (Б. Керниган, Д. Ритчи, "Язык программирования Си", рус.)
-
-## Библиография курса
-1. T. Cormen, **Algorithms Unlocked**
-2. T. Cormen et al., **Introduction to Algorithms** (Т. Кормен, "Алгоритмы", рус.)
-
-## Список дополнительной литературы
-1. H. Abelson, G. Sussman, **Structure and interpretation of computer programs** (Х. Абельсон, Дж. Сассман, "Структура и интерпретация компьютерных программ", рус.) -- https://sourceacademy.org/sicpjs/prefaces03
-2. A. Stepanov, P. McJones, **Elements of Programming** (А. Степанов, "Элементы программирования", рус.) -- http://elementsofprogramming.com/eop.pdf
-3. Книга об основах языка С++ для начинающих -- Андрей В. Столяров, [Введение в язык С++ (рус.)](http://www.stolyarov.info/books/pdf/cppintro5.pdf)
-
-## Онлайн-курсы для тех, кому не нравится язык С
-1. Введение в анализ данных в Python -- Тимофей Ф. Хирьянов (МФТИ),
-[Основы программирования и анализа данных на Python (рус.)](https://teach-in.ru/course/python-programming-and-data-analysis-basics)
-2. Серия видео о том, как компьютеры программируются с нуля -- 
-[Build a 65c02-based computer from scratch](https://www.youtube.com/playlist?list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH)
+## Как работать с git
+Используя этот репозиторий как пример:
+1. Скопируйте код на свой компьютер с помощью команды*<br><br>
+**git clone https://github.com/oop-fcim-utm-md/sda-2022.git**<br><br>
+*ссылка на репозиторий берется во вкладке* **<> Code** *на странице репозитория в github*<br>
+*это автоматически инициализирует git с веткой* main *в папке с локальной версией репозитория*<br>
+**требует авторизации (если через браузер не получается, необходимо сгенерировать Github [Personal Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token))*
+2. После того, как внесете значительные изменения в код, cохраните их с помощью команды<br><br>
+**git commit -am "commit message"**<br><br>
+*где* -am - *это дополнительные параметры, обозначающие выполнение команд add и message*<br>
+*в кавычках следует писать сообщение о сути изменений в новой версии репозитория, которую вы создаете таким образом*
+3. Для синхронизации файлов на github с локальными используйте команду*<br><br>
+**git push origin main**<br><br>
+*где* origin/main - *это указатель на удаленную ветку (точка назначения), а* main - *на локальную (источник)*<br>
+*требует авторизации
