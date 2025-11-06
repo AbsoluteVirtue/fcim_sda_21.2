@@ -16,5 +16,8 @@ pair(int, float) do_thing(int a, bool b) {
 
 int main () {
     auto result = do_thing(50, false);
-    printf("%zu-byte sized struct: { %d, %f }", sizeof(result), result.first, result.second); 
+    printf("%zu-byte sized struct: { %d, %f }", 
+        sizeof(result), 
+        result.first, 
+        result.second); 
 }
