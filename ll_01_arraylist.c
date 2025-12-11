@@ -1,4 +1,5 @@
 /*
+https://www.youtube.com/watch?v=95M6V3mZgrI
 Создать интерфейс для динамического массива.
 
 1. initialize -- инициализирует массив
