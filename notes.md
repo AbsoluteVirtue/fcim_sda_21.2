@@ -17,3 +17,6 @@ Of course, you must also be prepared to collect these into compound data structu
 Rule 5. Data dominates. If you've chosen the right data structures and organized things well, the algorithms will almost always be self-evident.  Data structures, not algorithms, are central to programming (see Brooks p. 102.)
 
 Rule 6. There is no Rule 6.
+
+## References
+1. A Linear Algebra Trick for Computing Fibonacci Numbers Fast, https://blog.codingconfessions.com/p/a-linear-algebra-trick-for-fibonacci-numbers
