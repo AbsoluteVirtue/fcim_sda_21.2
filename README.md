@@ -25,6 +25,7 @@
 1. H. Abelson, G. Sussman, **Structure and interpretation of computer programs** (Х. Абельсон, Дж. Сассман, "Структура и интерпретация компьютерных программ", рус.) -- https://sourceacademy.org/sicpjs/prefaces03
 2. A. Stepanov, P. McJones, **Elements of Programming** (А. Степанов, "Элементы программирования", рус.) -- http://elementsofprogramming.com/eop.pdf
 3. Книга об основах языка С++ для начинающих -- Андрей В. Столяров, [Введение в язык С++ (рус.)](http://www.stolyarov.info/books/pdf/cppintro5.pdf)
+4. Еще раз о сортировках -- https://00f.net/2026/02/17/sorting-without-leaking-secrets/
 
 ## Онлайн-курсы для тех, кому не нравится язык С
 1. Введение в анализ данных в Python -- Тимофей Ф. Хирьянов (МФТИ),
